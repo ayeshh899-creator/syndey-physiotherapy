@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Physiotherapy — CBD Clinic | Est. 1993</title>
+<meta name="description" content="Sydney CBD physiotherapy since 1993. Sports injury rehab, clinical Pilates, massage & more. Call (02) 9232 2311.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #1a5d3a;
+  --green-light: #2d7a4f;
+  --green-dark: #0f3d24;
+  --green-pale: #f0f7f2;
+  --gold: #f5a623;
+  --white: #ffffff;
+  --off-white: #fafbfa;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,sans-serif; color:var(--gray-800); line-height:1.6; background:var(--white); }
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; display:block; }
+.container { width:min(1200px,92%); margin:0 auto; }
+.center { text-align:center; }
+section { padding:5rem 0; }
+
+/* ===== HEADER ===== */
+header { position:sticky; top:0; z-index:100; background:var(--white); box-shadow:0 1px 4px rgba(0,0,0,.08); }
+.nav { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; }
+.logo { display:flex; align-items:center; gap:.6rem; }
+.logo-icon { width:40px; height:40px; background:var(--green); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.3rem; font-weight:800; }
+.logo-name { font-weight:700; color:var(--green-dark); font-size:1.05rem; line-height:1.2; }
+.logo-name small { display:block; font-size:.65rem; font-weight:400; color:var(--gray-500); }
+.nav-links { display:flex; gap:1.8rem; align-items:center; list-style:none; }
+.nav-links a { font-size:.9rem; font-weight:500; color:var(--gray-600); transition:.2s; }
+.nav-links a:hover { color:var(--green); }
+.nav-toggle { display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--green); }
+.btn { display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1.4rem; border-radius:8px; font-weight:600; font-size:.9rem; cursor:pointer; border:none; transition:.2s; }
+.btn:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,.12); }
+.btn-green { background:var(--green); color:#fff; }
+.btn-green:hover { background:var(--green-dark); }
+.btn-gold { background:var(--gold); color:#1f2937; }
+.btn-gold:hover { filter:brightness(.95); }
+.btn-outline { background:transparent; border:2px solid #fff; color:#fff; }
+.btn-outline:hover { background:#fff; color:var(--green-dark); }
+
+/* ===== HERO (no hours card) ===== */
+.hero { position:relative; padding:6rem 0; background:linear-gradient(rgba(10,30,20,.78),rgba(10,30,20,.78)),url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600') center/cover no-repeat; color:#fff; text-align:center; }
+.hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); padding:.4rem 1rem; border-radius:50px; font-size:.78rem; margin-bottom:1.2rem; }
+.hero-badge .dot { width:8px; height:8px; background:var(--gold); border-radius:50%; }
+.hero h1 { font-size:3rem; font-weight:800; line-height:1.15; margin-bottom:1.2rem; }
+.hero h1 span { color:var(--gold); }
+.hero p { font-size:1.1rem; opacity:.9; max-width:620px; margin:0 auto 2rem; }
+.hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.hero-stats { display:flex; gap:3rem; justify-content:center; margin-top:3rem; }
+.stat h3 { font-size:1.8rem; color:var(--gold); font-weight:800; }
+.stat p { font-size:.8rem; opacity:.85; }
+
+/* ===== SECTION HEADER ===== */
+.section-tag { display:inline-block; background:var(--green-pale); color:var(--green); font-weight:600; font-size:.78rem; padding:.4rem 1rem; border-radius:50px; letter-spacing:.5px; margin-bottom:1rem; }
+h2.sec-title { font-size:2.2rem; font-weight:700; color:var(--gray-900); margin-bottom:.8rem; }
+.sec-sub { color:var(--gray-500); font-size:1.02rem; max-width:600px; margin:0 auto 3rem; }
+
+/* ===== ABOUT ===== */
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:center; }
+.about-img { position:relative; border-radius:16px; overflow:hidden; }
+.about-img img { height:460px; width:100%; object-fit:cover; }
+.exp-badge { position:absolute; bottom:1.2rem; left:1.2rem; background:var(--green); color:#fff; padding:1rem 1.4rem; border-radius:12px; box-shadow:0 8px 20px rgba(26,93,58,.3); }
+.exp-badge strong { font-size:1.8rem; display:block; }
+.exp-badge span { font-size:.75rem; opacity:.9; }
+.about-text h2 { font-size:1.9rem; color:var(--gray-900); margin-bottom:1rem; }
+.about-text p { color:var(--gray-500); margin-bottom:1.2rem; }
+.feature-list { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0; }
+.feature { display:flex; gap:.8rem; align-items:flex-start; background:var(--gray-100); padding:.9rem 1rem; border-radius:10px; }
+.feature .fi { font-size:1.3rem; }
+.feature strong { font-size:.88rem; color:var(--gray-800); }
+.feature p { font-size:.78rem; color:var(--gray-500); margin:0; }
+
+/* ===== SERVICES ===== */
+.services { background:var(--off-white); }
+.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.service-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06); transition:.3s; }
+.service-card:hover { transform:translateY(-5px); box-shadow:0 10px 28px rgba(0,0,0,.12); }
+.service-img { height:190px; background-size:cover; background-position:center; position:relative; }
+.service-overlay { position:absolute; bottom:0; left:0; right:0; padding:1rem 1.2rem; background:linear-gradient(transparent,rgba(0,0,0,.75)); }
+.service-overlay span { color:#fff; font-size:1.1rem; font-weight:700; text-shadow:0 1px 4px rgba(0,0,0,.4); }
+.service-info { padding:1.2rem; }
+.service-info p { color:var(--gray-500); font-size:.88rem; margin-bottom:1rem; }
+.small-btn { padding:.45rem 1rem; font-size:.8rem; }
+
+/* ===== TEAM ===== */
+.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; }
+.team-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06); text-align:center; transition:.3s; }
+.team-card:hover { transform:translateY(-5px); box-shadow:0 10px 28px rgba(0,0,0,.12); }
+.team-img { height:240px; background-size:cover; background-position:center top; position:relative; }
+.team-info { padding:1.3rem; }
+.team-info h3 { font-size:1.05rem; color:var(--gray-900); }
+.team-info .role { color:var(--green); font-weight:600; font-size:.82rem; margin:.2rem 0 .5rem; }
+.team-info p { color:var(--gray-500); font-size:.82rem; }
+
+/* ===== REVIEWS ===== */
+.reviews { background:linear-gradient(135deg,var(--green-dark),var(--green)); color:#fff; }
+.reviews .sec-title { color:#fff; }
+.reviews .sec-sub { color:rgba(255,255,255,.8); }
+.reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; }
+.review-card { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:1.6rem; backdrop-filter:blur(4px); }
+.stars { color:var(--gold); font-size:1rem; margin-bottom:.8rem; letter-spacing:2px; }
+.review-card p { font-size:.9rem; opacity:.95; margin-bottom:1.2rem; }
+.reviewer { display:flex; align-items:center; gap:.9rem; }
+.reviewer img { width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.3); }
+.reviewer strong { font-size:.85rem; display:block; }
+.reviewer small { font-size:.72rem; opacity:.8; }
+
+/* ===== CONTACT (no form, no separate hours card) ===== */
+.contact { background:var(--off-white); }
+.contact-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.info-block { background:#fff; border:1px solid var(--gray-200); border-radius:14px; padding:1.5rem; text-align:center; box-shadow:0 2px 12px rgba(0,0,0,.05); transition:.3s; }
+.info-block:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.info-icon { width:52px; height:52px; margin:0 auto 1rem; background:var(--green-pale); color:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; }
+.info-block strong { font-size:1rem; color:var(--gray-900); display:block; margin-bottom:.3rem; }
+.info-block p, .info-block a { color:var(--gray-500); font-size:.88rem; }
+.info-block a:hover { color:var(--green); }
+.map-box { margin-top:3rem; border-radius:16px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.08); border:1px solid var(--gray-200); }
+.map-box iframe { width:100%; height:380px; border:0; display:block; }
+
+/* ===== FOOTER ===== */
+footer { background:var(--gray-900); color:#fff; padding:4rem 0 0; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; padding-bottom:2.5rem; }
+.footer-brand p { color:#9ca3af; font-size:.88rem; margin-top:1rem; max-width:320px; }
+.footer h4 { font-size:1rem; margin-bottom:1.2rem; color:#fff; }
+.footer ul { list-style:none; }
+.footer ul li { margin-bottom:.6rem; }
+.footer ul a { color:#9ca3af; font-size:.88rem; transition:.2s; }
+.footer ul a:hover { color:var(--gold); }
+.socials { display:flex; gap:.8rem; margin-top:1.2rem; }
+.socials a { width:38px; height:38px; background:rgba(255,255,255,.08); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; transition:.2s; }
+.socials a:hover { background:var(--gold); color:#1f2937; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.1); padding:1.2rem 0; text-align:center; font-size:.8rem; color:#9ca3af; }
+
+/* ===== BOOKING MODAL ===== */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(15,23,42,.6); z-index:200; align-items:center; justify-content:center; padding:1rem; }
+.modal-overlay.open { display:flex; }
+.modal { background:#fff; border-radius:16px; max-width:520px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; animation:pop .3s ease; }
+@keyframes pop { from { transform:scale(.92); opacity:0; } to { transform:scale(1); opacity:1; } }
+.modal-close { position:absolute; top:1rem; right:1rem; width:34px; height:34px; border-radius:50%; background:var(--gray-100); border:none; font-size:1.1rem; cursor:pointer; color:var(--gray-600); display:flex; align-items:center; justify-content:center; }
+.modal-close:hover { background:var(--gray-200); }
+.modal h3 { font-size:1.4rem; color:var(--gray-900); margin-bottom:.3rem; }
+.modal .modal-sub { color:var(--gray-500); font-size:.88rem; margin-bottom:1.5rem; }
+.field { margin-bottom:1rem; }
+.field label { display:block; font-size:.82rem; font-weight:600; color:var(--gray-600); margin-bottom:.35rem; }
+.field input, .field select, .field textarea { width:100%; padding:.7rem .9rem; border:1px solid var(--gray-200); border-radius:8px; font-size:.9rem; font-family:inherit; color:var(--gray-800); background:#fff; transition:.2s; }
+.field input:focus, .field select:focus, .field textarea:focus { outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(26,93,58,.1); }
+.field textarea { resize:vertical; min-height:80px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.form-note { font-size:.75rem; color:var(--gray-400); margin-top:1rem; text-align:center; }
+
+/* ===== FLOATING BOOK BUTTON ===== */
+.float-book { position:fixed; bottom:1.4rem; right:1.4rem; z-index:150; background:var(--gold); color:#1f2937; font-weight:700; padding:.9rem 1.6rem; border-radius:50px; border:none; cursor:pointer; box-shadow:0 6px 20px rgba(245,166,35,.4); font-size:.92rem; transition:.2s; }
+.float-book:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(245,166,35,.5); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero h1 { font-size:2.2rem; }
+  .services-grid, .team-grid, .reviews-grid { grid-template-columns:1fr 1fr; }
+  .about-grid { grid-template-columns:1fr; }
+  .hero-stats { gap:1.5rem; flex-wrap:wrap; }
+  .contact-cards { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 640px) {
+  section { padding:3.5rem 0; }
+  .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:1.2rem; box-shadow:0 8px 20px rgba(0,0,0,.1); gap:1rem; }
+  .nav-links.open { display:flex; }
+  .nav-toggle { display:block; }
+  .services-grid, .team-grid, .reviews-grid, .contact-cards { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+  .feature-list { grid-template-columns:1fr; }
+  .about-img img { height:340px; }
+  .hero { padding:4rem 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+<div class="container nav">
+  <a href="#" class="logo">
+    <div class="logo-icon">S</div>
+    <div class="logo-name">Sydney Physiotherapy<small>CBD CLINIC · EST. 1993</small></div>
+  </a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="btn btn-green" onclick="openModal()">Book Now</button></li>
+  </ul> 
+</div>
+</header>
+
+<!-- ===== HERO (clean - opening hours card REMOVED) ===== -->
+<section id="home" class="hero">
+<div class="container">
+  <div class="hero-badge" style="justify-content:center;"><span class="dot"></span> Feel Better · Move Freely · Live Fully</div>
+  <h1>Reclaim Your Strength With<br><span>Expert Physiotherapy</span></h1>
+  <p>Sydney's trusted CBD physiotherapy clinic since 1993. Sports injury rehab, clinical Pilates, dry needling and more — with one-on-one care from experienced practitioners.</p>
+  <div class="hero-btns">
+    <button class="btn btn-gold" onclick="openModal()">📅 Book An Appointment</button>
+    <a href="#services" class="btn btn-outline">Explore Services</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><h3>30+</h3><p>Years of Experience</p></div>
+    <div class="stat"><h3>10k+</h3><p>Patients Treated</p></div>
+    <div class="stat"><h3>4.9★</h3><p>Patient Rating</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+<div class="container about-grid">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800" alt="Sydney Physiotherapy clinic">
+    <div class="exp-badge"><strong>1993</strong><span>Serving Sydney CBD Since</span></div>
+  </div>
+  <div class="about-text">
+    <span class="section-tag">About Our Clinic</span>
+    <h2>Expert Care, Personal Attention, Real Results</h2>
+    <p>Founded by Jerome Murphy, Sydney Physiotherapy has helped thousands of Sydneysiders recover from injury and manage pain.</p>
+    <div class="feature-list">
+      <div class="feature"><span class="fi">🎓</span><div><strong>Qualified Experts</strong><p>Post-graduate trained physios</p></div></div>
+      <div class="feature"><span class="fi">🏆</span><div><strong>Rugby Experience</strong><p>World Cup & Lions Tours</p></div></div>
+      <div class="feature"><span class="fi">🩺</span><div><strong>HICAPS Rebates</strong><p>Instant health fund claims</p></div></div>
+      <div class="feature"><span class="fi">💳</span><div><strong>All Claims Welcome</strong><p>WorkCover · CTP · Medicare EPC</p></div></div>
+    </div>
+    <a href="#team" class="btn btn-green">Meet Our Team</a>
+  </div>
+</div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="services">
+<div class="container center">
+  <span class="section-tag">What We Offer</span>
+  <h2 class="sec-title">Our Services</h2>
+  <p class="sec-sub">Comprehensive physiotherapy solutions tailored to your recovery goals</p>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600')">
+        <div class="service-overlay"><span>Physiotherapy</span></div>
+      </div>
+      <div class="service-info"><p>One-on-one assessments and hands-on treatment for pain, injury and mobility issues.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600')">
+        <div class="service-overlay"><span>Sports Physiotherapy</span></div>
+      </div>
+      <div class="service-info"><p>Sports injury prevention, management and return-to-play programs for athletes.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600')">
+        <div class="service-overlay"><span>Clinical Pilates</span></div>
+      </div>
+      <div class="service-info"><p>Core stability, posture correction and flexibility programs in supervised classes.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=600')">
+        <div class="service-overlay"><span>Dry Needling</span></div>
+      </div>
+      <div class="service-info"><p>Trigger point therapy for chronic pain, tight muscles and tension-related conditions.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600')">
+        <div class="service-overlay"><span>ACL Rehabilitation</span></div>
+      </div>
+      <div class="service-info"><p>Pre-op and post-op ACL programs delivered in close collaboration with your surgeon.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600')">
+        <div class="service-overlay"><span>WorkCover / CTP</span></div>
+      </div>
+      <div class="service-info"><p>Workplace and motor vehicle injury rehabilitation — we handle all the paperwork.</p><button class="btn btn-green small-btn" onclick="openModal()">Book Now</button></div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team">
+<div class="container center">
+  <span class="section-tag">Our Team</span>
+  <h2 class="sec-title">Meet Our Practitioners</h2>
+  <p class="sec-sub">Experienced, qualified and genuinely invested in your recovery</p>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600')"></div>
+      <div class="team-info">
+        <h3>Jerome Murphy</h3>
+        <div class="role">Founder & Principal Physiotherapist</div>
+        <p>Practicing since 1993. UK-trained, post-grad in Orthopaedic Manipulative Therapy.</p>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600')"></div>
+      <div class="team-info">
+        <h3>Sarah Chen</h3>
+        <div class="role">Senior Physiotherapist</div>
+        <p>Specialist in sports injuries and ACL rehabilitation with 10+ years of experience.</p>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600')"></div>
+      <div class="team-info">
+        <h3>Michael Thompson</h3>
+        <div class="role">Clinical Pilates Instructor</div>
+        <p>Certified Pilates instructor focused on core stability and post-injury strength.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="reviews">
+<div class="container center">
+  <span class="section-tag" style="background:rgba(255,255,255,.15); color:#fff;">Patient Stories</span>
+  <h2 class="sec-title">What Our Patients Say</h2>
+  <p class="sec-sub">Real experiences from people we've helped get back to doing what they love</p>
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Jerome got me back on the rugby field after a serious knee injury. His rehab program was clear and effective."</p>
+      <div class="reviewer">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="James D. photo">
+        <div><strong>James D.</strong><small>Rugby Player</small></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"After months of lower back pain, dry needling and clinical Pilates made a huge difference. Professional team."</p>
+      <div class="reviewer">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Sarah W. photo">
+        <div><strong>Sarah W.</strong><small>Office Worker</small></div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"The team helped me recover after my ACL surgery. They coordinated with my surgeon every step of the way."</p>
+      <div class="reviewer">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="Michael T. photo">
+        <div><strong>Michael T.</strong><small>Sports Injury Patient</small></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ===== CONTACT (info + map only) ===== -->
+<section id="contact" class="contact">
+<div class="container center">
+  <span class="section-tag">Get In Touch</span>
+  <h2 class="sec-title">Visit Our CBD Clinic</h2>
+  <p class="sec-sub">Located in the heart of Sydney CBD — easy access from Wynyard Station & Martin Place. We're one call or message away from helping you heal.</p>
+
+  <div class="contact-cards" style="text-align:left;">
+    <div class="info-block">
+      <div class="info-icon">📍</div>
+      <strong>Address</strong>
+      <p>Suite 1604, Level 16, Randstad House<br>109 Pitt Street, Sydney NSW 2000</p>
+    </div>
+    <div class="info-block">
+      <div class="info-icon">📞</div>
+      <strong>Phone</strong>
+      <a href="tel:0292322311">(02) 9232 2311</a>
+      <p style="margin-top:.4rem;">Call to book or ask a question</p>
+    </div>
+    <div class="info-block">
+      <div class="info-icon">✉️</div>
+      <strong>Email</strong>
+      <a href="mailto:mail@sydneyphysio.com.au">mail@sydneyphysio.com.au</a>
+      <p style="margin-top:.4rem;">We reply within 1 business day</p>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem;">
+    <button class="btn btn-gold" style="font-size:1rem; padding:1rem 2rem;" onclick="openModal()">📅 Book An Appointment</button>
+  </div>
+
+  <div class="map-box">
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=151.2050%2C-33.8690%2C151.2120%2C-33.8650&layer=mapnik&marker=-33.8670%2C151.2085" loading="lazy"></iframe>
+  </div>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon" style="background:var(--gold); color:var(--green-dark);">S</div>
+        <div class="logo-name" style="color:#fff;">Sydney Physiotherapy<small style="color:#9ca3af;">CBD CLINIC · EST. 1993</small></div>
+      </a>
+      <p>Trusted CBD physiotherapy since 1993. Helping you move better, feel better and live fully.</p>
+      <div class="socials">
+  <a href="https://www.facebook.com/search/top?q=Sydney%20Physiotherapy" target="_blank" title="Facebook">f</a>
+  <a href="https://www.instagram.com/explore/tags/sydneyphysiotherapy/" target="_blank" title="Instagram">◎</a>
+  <a href="https://www.google.com/maps/search/Sydney+Physiotherapy+109+Pitt+Street+Sydney" target="_blank" title="Google">G</a>
+    </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#reviews">Patient Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Info</h4>
+      <ul>
+        <li><a href="tel:0292322311">📞 (02) 9232 2311</a></li>
+        <li><a href="mailto:mail@sydneyphysio.com.au">✉️ mail@sydneyphysio.com.au</a></li>
+        <li>📍 Suite 1604, 109 Pitt St,<br>Sydney NSW 2000</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> Sydney Physiotherapy. All rights reserved. | HICAPS · Medicare EPC · WorkCover · CTP
+  </div>
+</div>
+</footer>
+
+<!-- ===== BOOKING MODAL ===== -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Book An Appointment</h3>
+    <p class="modal-sub">Take the first step towards a pain-free life. We'll confirm your booking by phone or email.</p>
+    <form onsubmit="event.preventDefault(); alert('✅ Booking request received! We will call you to confirm.'); closeModal();">
+      <div class="form-row">
+        <div class="field"><label>Full Name *</label><input type="text" placeholder="Your name" required></div>
+        <div class="field"><label>Phone *</label><input type="tel" placeholder="Your phone" required></div>
+      </div>
+      <div class="field"><label>Email *</label><input type="email" placeholder="Your email" required></div>
+      <div class="field"><label>Service Type *</label>
+        <select required>
+          <option value="">Select a service...</option>
+          <option>Physiotherapy</option>
+          <option>Sports Physiotherapy</option>
+          <option>Clinical Pilates</option>
+          <option>Dry Needling</option>
+          <option>ACL Rehabilitation</option>
+          <option>WorkCover / CTP</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Preferred Date *</label><input type="date" required></div>
+        <div class="field"><label>Preferred Time *</label>
+          <select required>
+            <option value="">Select time</option>
+            <option>Morning (7:30 – 12:00)</option>
+            <option>Afternoon (12:00 – 3:00)</option>
+            <option>Evening (3:00 – 6:00)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>Notes (Optional)</label><textarea placeholder="Briefly describe your issue..."></textarea></div>
+      <button type="submit" class="btn btn-green" style="width:100%; justify-content:center;">Confirm Booking Request</button>
+      <p class="form-note">Or call us directly: <a href="tel:0292322311" style="color:var(--green); font-weight:600;">(02) 9232 2311</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- ===== FLOATING BOOK BUTTON ===== -->
+<button class="float-book" onclick="openModal()">📅 Book Now</button>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+function openModal() {
+  document.getElementById('bookingModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('bookingModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('bookingModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
