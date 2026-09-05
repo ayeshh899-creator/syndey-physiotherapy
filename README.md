@@ -3,8 +3,6 @@
 1. Download or clone this repository
 2. Open `index.html` in any browser
    - Or use VS Code **Live Server** extension for best experience
-Live demo:
- https://github.com/ayeshh899-creator/syndey-physiotherapy
 
 ## 🌐 Deployment
 
