@@ -4,7 +4,7 @@
 2. Open `index.html` in any browser
    - Or use VS Code **Live Server** extension for best experience
 Live demo:
- github.com/ayeshh899-creator/syndey-physiotherapy
+ https://github.com/ayeshh899-creator/syndey-physiotherapy
 
 ## 🌐 Deployment
 
